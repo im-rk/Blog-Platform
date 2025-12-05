@@ -2,6 +2,7 @@ package com.dev.blog.mappers;
 
 import com.dev.blog.domain.PostStatus;
 import com.dev.blog.domain.dtos.CategoryDto;
+import com.dev.blog.domain.dtos.CreateCategoryRequest;
 import com.dev.blog.domain.entities.Category;
 import com.dev.blog.domain.entities.Post;
 import jakarta.persistence.ManyToMany;
@@ -17,6 +18,7 @@ import java.util.List;
 public interface CategoryMapper {
     @Mapping(target="postCount",source="posts",qualifiedByName = "calculatePostCount")
     CategoryDto toDto(Category category);
+    Category toEntity(CreateCategoryRequest createCategoryRequest);
 
     @Named("calculatePostCount")
     default long calculatePostCount(List<Post> posts){
