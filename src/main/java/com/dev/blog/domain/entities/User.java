@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 @Entity
 @Table(name="users")
@@ -19,7 +20,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy= GenerationType.UUID)
-    private String id;
+    private UUID id;
 
     @Column(nullable = false,unique = true)
     private String email;
