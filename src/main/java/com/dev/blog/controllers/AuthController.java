@@ -23,6 +23,6 @@ public class AuthController {
         UserDetails userDetails=authenticationService.authenticate(loginRequest.getEmail(),loginRequest.getPassword());
         String tokenValue=authenticationService.generateToken(userDetails);
         AuthResponse authResponse=AuthResponse.builder().token(tokenValue).expiresIn(86400).build();
-        ResponseEntity.ok(authResponse);
+        return ResponseEntity.ok(authResponse);
     }
 }
