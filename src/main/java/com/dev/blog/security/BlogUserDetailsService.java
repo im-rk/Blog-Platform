@@ -13,7 +13,7 @@ public class BlogUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user=userRepository.findByEmail(email)
-                .orElseThrow(()->new UsernameNotFoundException("User not found with Email"+email));
+                .orElseThrow(()->new UsernameNotFoundException("User not found with Email: " + email));
         return new BlogUserDetails(user);
     }
 }
