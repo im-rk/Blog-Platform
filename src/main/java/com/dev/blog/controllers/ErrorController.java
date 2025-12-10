@@ -50,6 +50,4 @@ public class ErrorController {
                 .build();
         return new ResponseEntity<>(error, HttpStatus.UNAUTHORIZED);
     }
-
-
 }
