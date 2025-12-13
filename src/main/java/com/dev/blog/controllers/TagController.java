@@ -1,5 +1,7 @@
-package com.dev.blog.domain.dtos;
+package com.dev.blog.controllers;
 
+import com.dev.blog.domain.dtos.CreateTagRequest;
+import com.dev.blog.domain.dtos.TagResponse;
 import com.dev.blog.domain.entities.Tag;
 import com.dev.blog.mappers.TagMapper;
 import com.dev.blog.repositories.TagRepository;
@@ -10,11 +12,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping(path ="/api/v1/tags")
 @RequiredArgsConstructor
-public class TagController {
+public class  TagController {
     private final TagService tagService;
     private final TagMapper tagMapper;
     @GetMapping
@@ -34,5 +37,12 @@ public class TagController {
                 createdTagResponse,
                 HttpStatus.CREATED
         );
+    }
+
+    @DeleteMapping(path="/{id}")
+    public ResponseEntity<Void> deleteTag(@PathVariable UUID id)
+    {
+        tagService.deleteTag(id);
+        return ResponseEntity.noContent().build();
     }
 }
