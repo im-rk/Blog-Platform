@@ -1,7 +1,9 @@
 package com.dev.blog.services;
 
 import com.dev.blog.domain.CreatePostRequest;
+import com.dev.blog.domain.dtos.UpdatePostRequestDto;
 import com.dev.blog.domain.entities.Post;
+import com.dev.blog.domain.entities.UpdatePostRequest;
 import com.dev.blog.domain.entities.User;
 
 import java.util.List;
@@ -11,5 +13,6 @@ public interface PostService {
     List<Post> getAllPosts(UUID categoryId, UUID tagId);
     List<Post> getDraftPosts(User user);
     Post createPost(User user, CreatePostRequest createPostRequest);
-
+    Post updatePost(UUID id, UpdatePostRequest updatePostRequest);
+    Post getPosts(UUID id);
 }
