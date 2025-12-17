@@ -39,5 +39,5 @@ public class UpdatePostRequestDto {
     private Set<UUID> tags=new HashSet<>();
 
     @NotNull(message = "Status is required")
-    private PostStatus postStatus;
+    private PostStatus status;
 }
