@@ -2,7 +2,7 @@ package com.dev.blog.services.impl;
 
 import com.dev.blog.domain.CreatePostRequest;
 import com.dev.blog.domain.PostStatus;
-import com.dev.blog.domain.dtos.PostDto;
+import com.dev.blog.domain.UpdatePostRequest;
 import com.dev.blog.domain.entities.*;
 import com.dev.blog.repositories.PostRepository;
 import com.dev.blog.services.CategoryService;

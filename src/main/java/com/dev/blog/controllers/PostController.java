@@ -5,7 +5,7 @@ import com.dev.blog.domain.dtos.CreatePostRequestDto;
 import com.dev.blog.domain.dtos.PostDto;
 import com.dev.blog.domain.dtos.UpdatePostRequestDto;
 import com.dev.blog.domain.entities.Post;
-import com.dev.blog.domain.entities.UpdatePostRequest;
+import com.dev.blog.domain.UpdatePostRequest;
 import com.dev.blog.domain.entities.User;
 import com.dev.blog.mappers.PostMapper;
 import com.dev.blog.services.PostService;

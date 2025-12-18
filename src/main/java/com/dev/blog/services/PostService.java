@@ -1,9 +1,8 @@
 package com.dev.blog.services;
 
 import com.dev.blog.domain.CreatePostRequest;
-import com.dev.blog.domain.dtos.UpdatePostRequestDto;
 import com.dev.blog.domain.entities.Post;
-import com.dev.blog.domain.entities.UpdatePostRequest;
+import com.dev.blog.domain.UpdatePostRequest;
 import com.dev.blog.domain.entities.User;
 
 import java.util.List;

@@ -1,6 +1,5 @@
-package com.dev.blog.domain.entities;
+package com.dev.blog.domain;
 
-import com.dev.blog.domain.PostStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

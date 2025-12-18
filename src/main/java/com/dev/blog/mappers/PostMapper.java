@@ -6,7 +6,7 @@ import com.dev.blog.domain.dtos.CreatePostRequestDto;
 import com.dev.blog.domain.dtos.PostDto;
 import com.dev.blog.domain.dtos.UpdatePostRequestDto;
 import com.dev.blog.domain.entities.Post;
-import com.dev.blog.domain.entities.UpdatePostRequest;
+import com.dev.blog.domain.UpdatePostRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
