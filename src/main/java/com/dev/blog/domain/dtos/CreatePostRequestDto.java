@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
+@Builder
 public class CreatePostRequestDto {
     @NotBlank(message="Title is required")
     @Size(min=3,max=200,message="Title must be between {min} and {max} characters")
