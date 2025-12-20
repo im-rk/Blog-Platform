@@ -81,7 +81,8 @@ public class PostServiceImpl implements PostService {
         Category categoryId=categoryService.getCategoryById(createPostRequest.getCategoryId());
         newPost.setCategory(categoryId);
 
-        Set<UUID> tagsIds=createPostRequest.getTagsIds();
+        Set<UUID> tagsIds=createPostRequest.getTagIds();
+
         List<Tag> tags=tagService.getTagByIds(tagsIds);
         newPost.setTags(new HashSet<>(tags));
 
@@ -89,11 +90,12 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    @Transactional
     public Post updatePost(UUID id, UpdatePostRequest updatePostRequest) {
         Post existingPost=postRepository.findById(id).orElseThrow(()-> new EntityNotFoundException("Post does not exist with id"+id));
         existingPost.setTitle(updatePostRequest.getTitle());
         existingPost.setContent(updatePostRequest.getContent());
-        existingPost.setStatus(updatePostRequest.getPostStatus());
+        existingPost.setStatus(updatePostRequest.getStatus());
         existingPost.setReadingTime(calculateReadingTime(updatePostRequest.getContent()));
 
         UUID updatePostRequestCategoryId=updatePostRequest.getCategoryId();

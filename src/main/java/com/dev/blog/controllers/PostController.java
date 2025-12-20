@@ -62,7 +62,7 @@ public class PostController {
     @PutMapping("/{id}")
     public ResponseEntity<PostDto> updatePost(
             @PathVariable UUID id,
-            @Valid @RequestAttribute UpdatePostRequestDto updatePostRequestDto
+            @RequestBody @Valid UpdatePostRequestDto updatePostRequestDto
             )
     {
         UpdatePostRequest updatePostRequest=postMapper.toUpdatePostRequest(updatePostRequestDto);

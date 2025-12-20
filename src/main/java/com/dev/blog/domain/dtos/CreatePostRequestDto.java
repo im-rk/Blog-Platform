@@ -4,13 +4,18 @@ import com.dev.blog.domain.PostStatus;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.Builder;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
+@Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class CreatePostRequestDto {
     @NotBlank(message="Title is required")
     @Size(min=3,max=200,message="Title must be between {min} and {max} characters")

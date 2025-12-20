@@ -19,7 +19,7 @@ public interface TagMapper {
     TagDto toTagDto(Tag tag);
 
     @Named("calculatePostCount")
-    static Integer calculatePostCount(Set<Post> posts) {
+    default Integer calculatePostCount(Set<Post> posts) {
         if (posts == null) {
             return 0;
         }
