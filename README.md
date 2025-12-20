@@ -5,7 +5,7 @@
 All APIs are tested and documented using Postman.
 
 📌 Postman Collection Link:
-👉 (https://ramkumarkr.postman.co/workspace/Ramkumar-K-R's-Workspace~cd265aee-4258-4f63-8868-fd8dfb8607e4/collection/44813629-bb4142b6-01cc-4f68-92b6-5d2d66757213?action=share&creator=44813629)
+👉 https://documenter.getpostman.com/view/44813629/2sB3dWr6v4
 
 A modern, stateless blog backend built with **Spring Boot 3**, **JWT-based authentication**, **Spring Security**, and **Dockerized PostgreSQL**.  
 This service provides secure user login, post management, categories, tags, and more.
